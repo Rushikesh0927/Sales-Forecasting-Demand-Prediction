@@ -1,0 +1,14 @@
+{
+  "Linear Regression": {
+    "MAE": 1670.45,
+    "RMSE": 3325.2
+  },
+  "Random Forest": {
+    "MAE": 1398.04,
+    "RMSE": 2885.26
+  },
+  "ARIMA": {
+    "MAE": 469.76,
+    "RMSE": 604.1
+  }
+}
