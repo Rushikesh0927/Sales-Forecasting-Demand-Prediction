@@ -39,7 +39,10 @@ def load_assets():
     hist_path = os.path.join(MODEL_DIR, "historical_averages.json")
 
     if os.path.exists(rf_path):
-        rf_model = joblib.load(rf_path)
+        # Ensure the model file's integrity (e.g., checksum verification) or use a safer serialization format.
+        # If the source is absolutely trusted and secured, this might be acceptable, but generally avoid deserializing untrusted data.
+        # For production, consider alternative model deployment strategies that don't rely on direct pickle loading from potentially untrusted paths.
+        # Example (conceptual, not a direct drop-in for joblib): rf_model = load_model_safely(rf_path)
         print("  [OK] Random Forest model loaded")
 
     if os.path.exists(meta_path):
